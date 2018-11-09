@@ -1,0 +1,20 @@
+nav{
+    display:flex;
+    justify-content: center;
+}
+.formulario{
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:blueviolet; */
+}
+body{
+    background-image:url("../img/ou.jpg");
+    background-repeat: no-repeat;
+    
+}
+footer{
+    display:flex;
+    justify-content:center;
+}
