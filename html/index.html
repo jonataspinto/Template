@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header_container">
+        <a href="">LOGO</a>
+        <nav class="nav_container">
+            <ul>
+                <li><a href="">link 1</a></li>
+                <li><a href="">link 2</a></li>
+                <li><a href="">link 3</a></li>
+            </ul>            
+        </nav>
+
+        <nav class="nav_container_mobile" id="go" onclick="closeMenu()">
+            <div class="nav_botao_fechar" onclick="closeMenu()">
+                <button>X</button>
+            </div>
+
+            <ul>
+                <li>link 1</li>
+                <li>link 2</li>
+                <li>link 3</li>
+            </ul>            
+        </nav>
+
+        <div class="nav_botao" onclick="openMenu()">
+            <img onclick="openMenu()" src="img/menu.svg" alt="">
+        </div>        
+    </header>
+    <main class="main_container">
+        <header>
+            <h1>Título</h1>
+        </header>
+        <section class="articles">            
+            <article class="article_container">
+                <h2>Subtítulo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, accusantium! Totam eveniet amet unde sed aperiam sit quibusdam alias fugiat, impedit adipisci aliquam voluptatibus. Explicabo deleniti fugiat ea dolores necessitatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate voluptatem sapiente, itaque delectus tenetur corporis at eum dolore nihil. Ratione debitis laboriosam magnam dignissimos quas accusantium reprehenderit quia asperiores inventore.<br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero magni inventore voluptatibus consectetur eos cum, suscipit, iste consequatur reiciendis tempore quisquam quaerat rem delectus harum fuga temporibus impedit nulla molestiae.</p>
+            </article>
+
+            <article class="article_container">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, accusantium! Totam eveniet amet unde sed aperiam sit quibusdam alias fugiat, impedit adipisci aliquam voluptatibus. Explicabo deleniti fugiat ea dolores necessitatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate voluptatem sapiente, itaque delectus tenetur corporis at eum dolore nihil. Ratione debitis laboriosam magnam dignissimos quas accusantium reprehenderit quia asperiores inventore.<br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero magni inventore voluptatibus consectetur eos cum, suscipit, iste consequatur reiciendis tempore quisquam quaerat rem delectus harum fuga temporibus impedit nulla molestiae.</p>
+            </article>
+
+            <article class="article_container">
+                <h2>Subtítulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, accusantium! Totam eveniet amet unde sed aperiam sit quibusdam alias fugiat, impedit adipisci aliquam voluptatibus. Explicabo deleniti fugiat ea dolores necessitatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate voluptatem sapiente, itaque delectus tenetur corporis at eum dolore nihil. Ratione debitis laboriosam magnam dignissimos quas accusantium reprehenderit quia asperiores inventore.<br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero magni inventore voluptatibus consectetur eos cum, suscipit, iste consequatur reiciendis tempore quisquam quaerat rem delectus harum fuga temporibus impedit nulla molestiae.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; my footer</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
