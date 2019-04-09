@@ -1,0 +1,87 @@
+@import'./variables.scss';
+*{
+    margin: 0;
+    padding: 0;
+}
+body{   
+    header{
+        nav{
+            width: 100%;
+            height: 60px;
+            background-color: $bgc;
+            box-shadow: $shadow; 
+            justify-content: center;
+            ul{
+                list-style: none;
+                height: 100%;
+                li{
+                    height: 100%;
+                    padding: 0px $nav-li-pdd;
+                    &:hover{
+                        background-color: $nav-hover;
+                        transition: $nav-hoverT;
+                    }
+                    a{
+                        color: $font-color1;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-family: $arimo;                        
+                    }
+                }
+            }
+            div{
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                margin-right:5px; 
+                box-shadow: $shadow;
+                background-image: url('./../img/jon.png');
+                background-attachment: initial;
+                background-position-x: 50%;
+                background-position-y: 50%;
+                background-size: cover;
+                align-self: center;
+                position: absolute;
+                right: 0;
+                img{
+                    width: 50% ;
+                    height: 50%; 
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    main{
+        height: 100vh;
+        section{
+
+        }
+    }
+
+    footer{
+        background-color: $bgc;
+        width: 100%;
+        height: 110px;
+        box-shadow: $shadow-in; 
+
+        p{
+            font-family: $arimo;
+            color: $font-color1;
+        }
+    }
+}
+
+// CLASSES
+.flex{
+    display: flex;
+}
+.flexRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
