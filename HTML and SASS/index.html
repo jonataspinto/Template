@@ -8,23 +8,52 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="flex">
-            <ul class="flex">
-                <li class="flexRow"><a href="#">LinkedIn</a></li>
-                <li class="flexRow"><a href="#">GitHub</a></li>
-                <li class="flexRow"><a href="#">Instagram</a></li>
+    <header class="my-header">
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Instagram</a></li>
             </ul>
-            <div></div>
+            <div class="img-logo"></div>
         </nav>
     </header>
-    <main class="flexRow">
-        <section class="flexRow">
-            <!-- <img src="./img/jon.png" alt=""> -->
+    <main class="">
+        <section class="colaps-section" id="colapsSection">
+            <button class="collaps-buttom">My Projects</button>
+            <div class="content" id="colapsContent">
+                <ul>
+                    <li onclick="closeColaps()" id="inova">Innova</li>
+                    <li onclick="closeColaps()" id="">---</li>
+                    <li onclick="closeColaps()" id="">---</li>
+                </ul>
+            </div>
+
+            <button class="collaps-buttom">E. Devs</button>
+            <div class="content">
+                <ul>                    
+                    <li onclick="closeColaps()" id="esdevs">Devs</li>
+                    <li onclick="closeColaps()" id="goods">Ggoods</li>
+                    <li onclick="closeColaps()" id="inova">null</li>
+                </ul>
+            </div>
+
+            <button class="collaps-buttom">---</button>
+            <div class="content">
+                <ul>
+                    <li onclick="closeColaps()" id="inova">null</li>
+                    <li onclick="closeColaps()" id="inova">null</li>
+                    <li onclick="closeColaps()" id="inova">null</li>
+                </ul>
+            </div>
+        </section>
+        <section class="frame" id="corpframe">
+            <iframe id="iframe" src="" frameborder="0"></iframe>
         </section>
     </main>
-    <footer class="flexRow">
+    <footer class="my-footer">
         <p>&copy; | 2019 </p>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>

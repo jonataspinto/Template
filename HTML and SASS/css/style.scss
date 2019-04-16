@@ -3,85 +3,129 @@
     margin: 0;
     padding: 0;
 }
-body{   
-    header{
-        nav{
-            width: 100%;
-            height: 60px;
-            background-color: $bgc;
-            box-shadow: $shadow; 
-            justify-content: center;
-            ul{
-                list-style: none;
+@mixin flex($-direction, $-justifyContent, $-alignItems){
+    display: flex;
+    flex-direction: $-direction;
+    justify-content:$-justifyContent;
+    align-items: $-alignItems;
+}
+@mixin theme($-width, $-heigth, $-backgroundColor, $-boxShadow){
+    width: $-width;
+    height: $-heigth;
+    background-color: $-backgroundColor;
+    box-shadow: $-boxShadow;
+}
+@mixin text($-color, $-textDecoration, $-textTransform, $-fontFamily){    
+    color: $-color;
+    text-decoration: $-textDecoration;
+    text-transform: $-textTransform;
+    font-family: $-fontFamily;  
+}
+.my-header{
+    .nav-bar{
+        @include flex(normal, center, normal);
+        @include theme(100%, 60px, $bgc, $shadow);
+        ul{
+            @include flex(normal, normal, normal);
+            list-style: none;
+            height: 100%;
+            li{
+                @include flex(normal, center, center);
                 height: 100%;
+                padding: 0px $nav-li-pdd;
+                &:hover{
+                    background-color:lighten($bgc, 10%);
+                    transition: $nav-hoverT;
+                }
+                a{
+                    @include text($font-color1, none, none, $arimo);                     
+                }
+            }
+        }
+        .img-logo{
+            @include theme (50px, 50px, none, $shadow);
+            border-radius: 50%;
+            margin-right:5px; 
+            background-image: url('./../img/jon.png');
+            background-attachment: initial;
+            background-position-x: 50%;
+            background-position-y: 50%;
+            background-size: cover;
+            align-self: center;
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+main{
+    @include flex(row, normal, normal);
+    min-height: 100vh;
+    .colaps-section{
+        @include theme(15vw, 100vh, rgb(138, 138, 138), 1px 2px 8px rgba(20, 20, 20, 0.473));
+        .collaps-buttom {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .content {
+            width: 100%;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            ul{
+                @include flex(column, normal, normal );
+                list-style: none;
+                background-color: lighten(#f1f1f1, 10%);
                 li{
-                    height: 100%;
-                    padding: 0px $nav-li-pdd;
-                    &:hover{
-                        background-color: $nav-hover;
-                        transition: $nav-hoverT;
-                    }
-                    a{
-                        color: $font-color1;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-family: $arimo;                        
-                    }
+                    @include flex(normal, flex-start, center );
+                    @include theme(100%, 30px, #f1f1f1, none);
+                    @include text(#444, none, none, $arimo);
+                    cursor: pointer;
+                    font-size: 1.1em;
+                    margin-left: 5px;
                 }
-            }
-            div{
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                margin-right:5px; 
-                box-shadow: $shadow;
-                background-image: url('./../img/jon.png');
-                background-attachment: initial;
-                background-position-x: 50%;
-                background-position-y: 50%;
-                background-size: cover;
-                align-self: center;
-                position: absolute;
-                right: 0;
-                img{
-                    width: 50% ;
-                    height: 50%; 
-                    border-radius: 50%;
+                li:hover{
+                    background-color: lighten(#ccc, 10%);
                 }
             }
         }
-    }
-
-    main{
-        height: 100vh;
-        section{
-
+        .active, .collaps-buttom:hover{
+        background-color: #ccc;
         }
     }
-
-    footer{
-        background-color: $bgc;
-        width: 100%;
-        height: 110px;
-        box-shadow: $shadow-in; 
-
-        p{
-            font-family: $arimo;
-            color: $font-color1;
+    .frame{
+        @include theme(100%, 100vh, none, none);
+        @include flex(normal, center, center);
+        iframe{
+            @include theme(80vw, 90vh, white, $shadow);
+            overflow: hidden;
         }
     }
 }
 
-// CLASSES
-.flex{
-    display: flex;
+.my-footer{
+    @include flex(normal, center, center);
+    @include theme(100%, 110px, $bgc, $shadow-in);
+    p{
+        @include text($font-color1, none, none, $arimo);
+    }
 }
-.flexRow{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.flexColumn{
-    display: flex;
-    flex-direction: column;
+
+@media screen and(max-width: 768px){
+    .my-header{
+        .nav-bar{
+            ul{
+                display: none;
+            }
+        }
+    }
+    .colaps-section{
+        display: none;
+    }
 }
