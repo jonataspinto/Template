@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo");
-* {
-  margin: 0;
-  padding: 0;
-}
-
+/*header*/
 .my-header .nav-bar {
   display: flex;
   flex-direction: normal;
@@ -57,6 +53,7 @@
   right: 0;
 }
 
+/*main*/
 main {
   display: flex;
   flex-direction: row;
@@ -137,7 +134,7 @@ main .frame iframe {
 
 .my-footer {
   display: flex;
-  flex-direction: normal;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -150,6 +147,11 @@ main .frame iframe {
   text-decoration: none;
   text-transform: none;
   font-family: "Arimo", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {

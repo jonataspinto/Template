@@ -1,0 +1,7 @@
+.my-footer{
+    @include flex(column, center, center);
+    @include theme(100%, 110px, $bgc, $shadow-in);
+    p{
+        @include text($font-color1, none, none, $arimo);
+    }
+}
