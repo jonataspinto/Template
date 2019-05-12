@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Arimo");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.my-header .nav-bar {
+  display: flex;
+  flex-direction: normal;
+  justify-content: center;
+  align-items: normal;
+  width: 100%;
+  height: 60px;
+  background-color: #3e3c3c;
+  box-shadow: 0px 2px 8px rgba(20, 20, 20, 0.473);
+}
+.my-header .nav-bar ul {
+  display: flex;
+  flex-direction: normal;
+  justify-content: normal;
+  align-items: normal;
+  list-style: none;
+  height: 100%;
+}
+.my-header .nav-bar ul li {
+  display: flex;
+  flex-direction: normal;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0px 25px;
+}
+.my-header .nav-bar ul li:hover {
+  background-color: #585555;
+  transition: 0.5s;
+}
+.my-header .nav-bar ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Arimo", sans-serif;
+}
+.my-header .nav-bar .img-logo {
+  width: 50px;
+  height: 50px;
+  background-color: none;
+  box-shadow: 0px 2px 8px rgba(20, 20, 20, 0.473);
+  border-radius: 50%;
+  margin-right: 5px;
+  background-image: url("./../img/jon.png");
+  background-attachment: initial;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+  align-self: center;
+  position: absolute;
+  right: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
+  min-height: 100vh;
+}
+main .colaps-section {
+  width: 15vw;
+  height: 100vh;
+  background-color: #8a8a8a;
+  box-shadow: 1px 2px 8px rgba(20, 20, 20, 0.473);
+}
+main .colaps-section .collaps-buttom {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+main .colaps-section .content {
+  width: 100%;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+main .colaps-section .content ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  list-style: none;
+  background-color: white;
+}
+main .colaps-section .content ul li {
+  display: flex;
+  flex-direction: normal;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #f1f1f1;
+  box-shadow: none;
+  color: #444;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Arimo", sans-serif;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-left: 5px;
+}
+main .colaps-section .content ul li:hover {
+  background-color: #e6e6e6;
+}
+main .colaps-section .active, main .colaps-section .collaps-buttom:hover {
+  background-color: #ccc;
+}
+main .frame {
+  width: 100%;
+  height: 100vh;
+  background-color: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: normal;
+  justify-content: center;
+  align-items: center;
+}
+main .frame iframe {
+  width: 80vw;
+  height: 90vh;
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(20, 20, 20, 0.473);
+  overflow: hidden;
+}
+
+.my-footer {
+  display: flex;
+  flex-direction: normal;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  background-color: #3e3c3c;
+  box-shadow: 0px -2px 8px rgba(20, 20, 20, 0.473);
+}
+.my-footer p {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  font-family: "Arimo", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .my-header .nav-bar ul {
+    display: none;
+  }
+
+  .colaps-section {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

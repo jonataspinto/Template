@@ -1,0 +1,14 @@
+// COLLOR
+$bgc: lighten(rgb(36, 35, 35),10%);
+$shadow: 0px 2px 8px rgba(20, 20, 20, 0.473);
+$shadow-in: 0px -2px 8px rgba(20, 20, 20, 0.473);
+$font-color1: white;
+$nav-hover: rgb(129, 145, 140);
+$nav-hoverT: .5s;
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+$arimo:'Arimo', sans-serif; 
+
+// padding and margin nav
+$nav-li-pdd: 25px;
